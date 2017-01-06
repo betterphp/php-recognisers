@@ -1,0 +1,22 @@
+<?php
+
+declare(strict_types=1);
+
+namespace betterphp\recogniser\file;
+
+class readable_file_recogniser extends file_recogniser {
+
+    /**
+     * @inheritDoc
+     */
+    public function recognises($input) {
+        $recognised_file = parent::recognises($input);
+
+        if ($recognised_file !== true) {
+            return $recognised_file;
+        }
+
+        return is_readable($input);
+    }
+
+}
