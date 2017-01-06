@@ -6,6 +6,9 @@ use PHPUnit\Framework\TestCase;
 
 use betterphp\recogniser\file\readable_file_recogniser;
 
+/**
+ * @covers \betterphp\recogniser\file\readable_file_recogniser
+ */
 class ReadableFileRecogniserTest extends TestCase {
 
     private $recogniser;
