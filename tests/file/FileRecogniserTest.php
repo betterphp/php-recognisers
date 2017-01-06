@@ -2,23 +2,15 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
-
 use betterphp\recogniser\file\file_recogniser;
 
 /**
  * @covers \betterphp\recogniser\file\file_recogniser
  */
-class FileRecogniserTest extends TestCase {
+class FileRecogniserTest extends RecogniserTest {
 
-    private $recogniser;
-
-    public function setUp() {
-        $this->recogniser = new file_recogniser();
-    }
-
-    public function tearDown() {
-        unset($this->recogniser);
+    public function __construct() {
+        parent::__construct(file_recogniser::class);
     }
 
     public function testRecognises() {
