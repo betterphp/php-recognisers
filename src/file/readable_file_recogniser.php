@@ -9,7 +9,7 @@ class readable_file_recogniser extends file_recogniser {
     /**
      * @inheritDoc
      */
-    public function recognises(string $input): bool {
+    public function recognises(string $input): ?bool {
         $recognised_file = parent::recognises($input);
 
         if ($recognised_file !== true) {

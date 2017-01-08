@@ -13,6 +13,6 @@ interface string_recogniser extends recogniser {
      *
      * @return boolean True, false or null if undecided
      */
-    public function recognises(string $input): bool;
+    public function recognises(string $input): ?bool;
 
 }
