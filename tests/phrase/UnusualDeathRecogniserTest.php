@@ -20,6 +20,10 @@ class UnusualDeathRecogniserTest extends RecogniserTest {
         $this->assertFalse($this->recogniser->recognises('mouth jumped into fish'));
     }
 
+    public function testRecognisesReasonsNoInput() {
+        $this->assertFalse($this->recogniser->recognises(''));
+    }
+
     public function testRecognisesReasonsWithSmallWords() {
         $this->assertTrue($this->recogniser->recognises('tip fish in jumped and into up mouth my'));
     }

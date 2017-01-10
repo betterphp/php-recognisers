@@ -63,6 +63,11 @@ class unusual_death_recogniser implements string_recogniser {
 
         $total_input_words = count($input_words);
 
+        // Empty query is not a match
+        if ($total_input_words === 0) {
+            return false;
+        }
+
         foreach ($deaths as $death) {
             $description = preg_replace('#[^a-z\- ]+#i', '', $death['description']);
             $description = trim($description);
