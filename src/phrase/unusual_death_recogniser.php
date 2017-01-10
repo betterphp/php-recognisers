@@ -96,6 +96,7 @@ class unusual_death_recogniser implements string_recogniser {
                 for ($i = $last_match_position; $i < $total_description_words; ++$i) {
                     $description_word = $description_words[$i];
 
+                    // This is not an efficient use of a slow_function, but this is not a real project *shrug*
                     similar_text($input_word, $description_word, $confidence);
 
                     if ($confidence > 80) {
