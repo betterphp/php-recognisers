@@ -2,12 +2,10 @@
 
 declare(strict_types=1);
 
-use PHPUnit\Framework\TestCase;
-
 /**
  * @coversNothing
  */
-abstract class RecogniserTest extends TestCase {
+abstract class RecogniserTest extends RecogniserTestCase {
 
     private $class_name;
     protected $recogniser;
