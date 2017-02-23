@@ -12,7 +12,7 @@ class file_recogniser implements string_recogniser {
      * @inheritDoc
      */
     public function recognises(string $input): ?bool {
-        return is_string($input) && is_file($input);
+        return is_file($input);
     }
 
 }
